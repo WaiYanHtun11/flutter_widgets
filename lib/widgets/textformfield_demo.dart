@@ -4,8 +4,8 @@ class TextFormFieldDemo extends StatefulWidget {
   @override
   State<TextFormFieldDemo> createState() => _TextFormFieldDemoState();
 }
-class _TextFormFieldDemoState extends State<TextFormFieldDemo> {
 
+class _TextFormFieldDemoState extends State<TextFormFieldDemo> {
   Widget buildInputForm(icon,label,hint,type,{prefix}){
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16,horizontal:24),
