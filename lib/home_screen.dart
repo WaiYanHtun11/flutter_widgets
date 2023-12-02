@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widgets/preview.dart';
 import 'package:flutter_widgets/widgets/text_demo.dart';
 import 'package:flutter_widgets/widgets/textfield_demo.dart';
+import 'package:flutter_widgets/widgets/textformfield_demo.dart';
 
 import 'widgets/icon_demo.dart';
 class HomeScreen extends StatelessWidget {
@@ -50,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                       buildSubMenuItem('1', 'Icon',const IconDemo(),'lib/widgets/icon_demo.dart'),
                       buildSubMenuItem('2', 'Text',const TextDemo(),'lib/widgets/text_demo.dart'),
                       buildSubMenuItem('3', 'TextField',const TextFieldDemo(),'lib/widgets/textfield_demo.dart'),
-                      buildSubMenuItem('4', 'TextFormField',const Placeholder(),''),
+                      buildSubMenuItem('4', 'TextFormField',const TextFormFieldDemo(),'lib/widgets/textformfield_demo.dart'),
                       buildSubMenuItem('5', 'Image',const Placeholder(),''),
                       buildSubMenuItem('6', 'Card,Inkwell',const Placeholder(),''),
                       buildSubMenuItem('7', 'Gradient',const Placeholder(),''),
