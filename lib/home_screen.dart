@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/preview.dart';
+import 'package:flutter_widgets/widgets/button_demo.dart';
 import 'package:flutter_widgets/widgets/card_demo.dart';
+import 'package:flutter_widgets/widgets/dropdown_button_demo.dart';
 import 'package:flutter_widgets/widgets/gradient_demo.dart';
 import 'package:flutter_widgets/widgets/image_demo.dart';
+import 'package:flutter_widgets/widgets/stateful_widgets_demo.dart';
 import 'package:flutter_widgets/widgets/text_demo.dart';
 import 'package:flutter_widgets/widgets/textfield_demo.dart';
 import 'package:flutter_widgets/widgets/textformfield_demo.dart';
@@ -58,9 +61,9 @@ class HomeScreen extends StatelessWidget {
                       buildSubMenuItem('5', 'Image',const ImageDemo(),'lib/widgets/image_demo.dart'),
                       buildSubMenuItem('6', 'Card,Inkwell',const CardDemo(),'lib/widgets/card_demo.dart'),
                       buildSubMenuItem('7', 'Gradient',const GradientDemo(),'lib/widgets/gradient_demo.dart'),
-                      buildSubMenuItem('8', 'Buttons', const Placeholder(), ''),
-                      buildSubMenuItem('9', 'Dropdown Button',const Placeholder(),''),
-                      buildSubMenuItem('10', 'Other Stateful Widgets',const Placeholder(),'')
+                      buildSubMenuItem('8', 'Buttons', const ButtonDemo(), 'lib/widgets/button_demo.dart'),
+                      buildSubMenuItem('9', 'Dropdown Button',const DropDownButtonDemo(),'lib/widgets/dropdown_button_demo.dart'),
+                      buildSubMenuItem('10', 'Other Stateful Widgets',const StatefulWidgetsDemo(),'lib/widgets/stateful_widgets_demo.dart')
                     ],
                   )
                 ],
