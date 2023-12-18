@@ -4,8 +4,8 @@ class SwipeDemo extends StatefulWidget {
   @override
   State<SwipeDemo> createState() => _SwipeDemoState();
 }
+
 class _SwipeDemoState extends State<SwipeDemo> {
-  
   List<String> items = List.generate(20, (index) => "Bird ${index + 1}");
 
   void showInfo(dir,item,index){
