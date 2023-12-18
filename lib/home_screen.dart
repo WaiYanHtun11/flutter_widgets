@@ -5,6 +5,11 @@ import 'package:flutter_widgets/layouts/fractionally_sized_box_demo.dart';
 import 'package:flutter_widgets/layouts/row_col_demo.dart';
 import 'package:flutter_widgets/layouts/stack_demo.dart';
 import 'package:flutter_widgets/layouts/wrap_demo.dart';
+import 'package:flutter_widgets/lists/expansion_tile_demo.dart';
+import 'package:flutter_widgets/lists/grid_view_demo.dart';
+import 'package:flutter_widgets/lists/list_tile_demo.dart';
+import 'package:flutter_widgets/lists/listview_demo.dart';
+import 'package:flutter_widgets/lists/swipe_demo.dart';
 import 'package:flutter_widgets/preview.dart';
 import 'package:flutter_widgets/widgets/button_demo.dart';
 import 'package:flutter_widgets/widgets/card_demo.dart';
@@ -42,6 +47,7 @@ class HomeScreen extends StatelessWidget {
     Widget buildMenuItem(icon,title,subMenuItems){
         return Card(
           child: ExpansionTile(
+            shape: Border.all(color: Colors.transparent),
             leading: Icon(icon),
             title: Text(title),
             children: subMenuItems,
@@ -69,6 +75,13 @@ class HomeScreen extends StatelessWidget {
         buildSubMenuItem('5', 'Expanded Demo', const ExpandedDemo(), 'lib/layouts/expanded_demo.dart'),
         buildSubMenuItem('6', 'Stack Demo', const StackDemo(), 'lib/layouts/stack_demo.dart')
     ];
+    List<Widget> listItems = [
+      buildSubMenuItem('1', 'ListTile', const ListTileDemo(), 'lib/lists/list_tile_demo.dart'),
+      buildSubMenuItem('2', 'ListView', const ListViewDemo(), 'lib/lists/listview_demo.dart'),
+      buildSubMenuItem('3', 'GridView', const GridViewDemo(), 'lib/lists/grid_view_demo.dart'),
+      buildSubMenuItem('4', 'Expansion Tile',const ExpansionTileDemo(), 'lib/lists/expansion_tile_demo.dart'),
+      buildSubMenuItem('5', 'Swipe To Dismiss', const SwipeDemo(), 'lib/lists/swipe_demo.dart')
+    ];
 
     return Scaffold(
       appBar: AppBar(
@@ -82,7 +95,8 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               buildMenuItem(Icons.widgets, 'Widgets', widgetItems),
-              buildMenuItem(Icons.dashboard, 'Layouts', layoutItems)
+              buildMenuItem(Icons.dashboard, 'Layouts', layoutItems),
+              buildMenuItem(Icons.list, 'Lists', listItems)
             ]
           ),
         ),
