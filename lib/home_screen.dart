@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/appbars/basic_appbar_demo.dart';
+import 'package:flutter_widgets/appbars/bottom_appbar_demo.dart';
 import 'package:flutter_widgets/layouts/container_demo.dart';
 import 'package:flutter_widgets/layouts/expanded_demo.dart';
 import 'package:flutter_widgets/layouts/fractionally_sized_box_demo.dart';
 import 'package:flutter_widgets/layouts/row_col_demo.dart';
 import 'package:flutter_widgets/layouts/stack_demo.dart';
 import 'package:flutter_widgets/layouts/wrap_demo.dart';
+import 'package:flutter_widgets/lists/datatable_demo.dart';
 import 'package:flutter_widgets/lists/expansion_tile_demo.dart';
 import 'package:flutter_widgets/lists/grid_view_demo.dart';
 import 'package:flutter_widgets/lists/list_tile_demo.dart';
 import 'package:flutter_widgets/lists/listview_demo.dart';
+import 'package:flutter_widgets/lists/reorderable_list_demo.dart';
 import 'package:flutter_widgets/lists/swipe_demo.dart';
 import 'package:flutter_widgets/preview.dart';
 import 'package:flutter_widgets/widgets/button_demo.dart';
@@ -80,7 +84,13 @@ class HomeScreen extends StatelessWidget {
       buildSubMenuItem('2', 'ListView', const ListViewDemo(), 'lib/lists/listview_demo.dart'),
       buildSubMenuItem('3', 'GridView', const GridViewDemo(), 'lib/lists/grid_view_demo.dart'),
       buildSubMenuItem('4', 'Expansion Tile',const ExpansionTileDemo(), 'lib/lists/expansion_tile_demo.dart'),
-      buildSubMenuItem('5', 'Swipe To Dismiss', const SwipeDemo(), 'lib/lists/swipe_demo.dart')
+      buildSubMenuItem('5', 'Swipe To Dismiss', const SwipeDemo(), 'lib/lists/swipe_demo.dart'),
+      buildSubMenuItem('6', 'Reorderable List',const ReorderableListDemo(), 'lib/lists/reorderable_list_demo.dart'),
+      buildSubMenuItem('7', 'DataTable', const DataTableDemo(), 'lib/lists/datatable_demo.dart')
+    ];
+    List<Widget> appbarItems = [
+      buildSubMenuItem('1', 'Basic AppBar',const BasicAppBarDemo(),'lib/appbars/basic_appbar_demo.dart'),
+      buildSubMenuItem('2', 'Bottom AppBar & FAB', const BottomAppBarDemo(), 'lib/appbars/bottom_appbar_demo.dart')
     ];
 
     return Scaffold(
@@ -96,7 +106,8 @@ class HomeScreen extends StatelessWidget {
             children: [
               buildMenuItem(Icons.widgets, 'Widgets', widgetItems),
               buildMenuItem(Icons.dashboard, 'Layouts', layoutItems),
-              buildMenuItem(Icons.list, 'Lists', listItems)
+              buildMenuItem(Icons.list, 'Lists', listItems),
+              buildMenuItem(Icons.phone_android, 'AppBars', appbarItems)
             ]
           ),
         ),
