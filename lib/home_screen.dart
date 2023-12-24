@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/appbars/backdrop_demo.dart';
 import 'package:flutter_widgets/appbars/basic_appbar_demo.dart';
 import 'package:flutter_widgets/appbars/bottom_appbar_demo.dart';
+import 'package:flutter_widgets/appbars/convex_appbar_demo.dart';
+import 'package:flutter_widgets/appbars/search_bar_demo.dart';
+import 'package:flutter_widgets/appbars/sliver_appbar_demo.dart';
 import 'package:flutter_widgets/layouts/container_demo.dart';
 import 'package:flutter_widgets/layouts/expanded_demo.dart';
 import 'package:flutter_widgets/layouts/fractionally_sized_box_demo.dart';
@@ -90,7 +94,11 @@ class HomeScreen extends StatelessWidget {
     ];
     List<Widget> appbarItems = [
       buildSubMenuItem('1', 'Basic AppBar',const BasicAppBarDemo(),'lib/appbars/basic_appbar_demo.dart'),
-      buildSubMenuItem('2', 'Bottom AppBar & FAB', const BottomAppBarDemo(), 'lib/appbars/bottom_appbar_demo.dart')
+      buildSubMenuItem('2', 'Bottom AppBar & FAB', const BottomAppBarDemo(), 'lib/appbars/bottom_appbar_demo.dart'),
+      buildSubMenuItem('3', 'Sliver App Bar', const SliverAppBarDemo(),'/lib/appbars/sliver_appbar_demo.dart'),
+      buildSubMenuItem('4', 'Backdrop Demo', const BackDropDemo(), '/lib/appbars/backdrop_demo.dart'),
+      buildSubMenuItem('5', 'Convex Appbar Demo', const ConvexAppBarDemo(), '/lib/appbars/convex_appbar_demo.dart'),
+      buildSubMenuItem('6', 'Search Bar Demo', const SearchBarDemo(), '/lib/appbars/search_bar_demo.dart')
     ];
 
     return Scaffold(
