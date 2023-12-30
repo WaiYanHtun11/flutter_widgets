@@ -18,6 +18,9 @@ import 'package:flutter_widgets/lists/list_tile_demo.dart';
 import 'package:flutter_widgets/lists/listview_demo.dart';
 import 'package:flutter_widgets/lists/reorderable_list_demo.dart';
 import 'package:flutter_widgets/lists/swipe_demo.dart';
+import 'package:flutter_widgets/navigations/dialog_demo.dart';
+import 'package:flutter_widgets/navigations/drawer_demo.dart';
+import 'package:flutter_widgets/navigations/tab_demo.dart';
 import 'package:flutter_widgets/preview.dart';
 import 'package:flutter_widgets/widgets/button_demo.dart';
 import 'package:flutter_widgets/widgets/card_demo.dart';
@@ -92,6 +95,7 @@ class HomeScreen extends StatelessWidget {
       buildSubMenuItem('6', 'Reorderable List',const ReorderableListDemo(), 'lib/lists/reorderable_list_demo.dart'),
       buildSubMenuItem('7', 'DataTable', const DataTableDemo(), 'lib/lists/datatable_demo.dart')
     ];
+
     List<Widget> appbarItems = [
       buildSubMenuItem('1', 'Basic AppBar',const BasicAppBarDemo(),'lib/appbars/basic_appbar_demo.dart'),
       buildSubMenuItem('2', 'Bottom AppBar & FAB', const BottomAppBarDemo(), 'lib/appbars/bottom_appbar_demo.dart'),
@@ -101,6 +105,11 @@ class HomeScreen extends StatelessWidget {
       buildSubMenuItem('6', 'Search Bar Demo', const SearchBarDemo(), '/lib/appbars/search_bar_demo.dart')
     ];
 
+    List<Widget> navigationItems = [
+      buildSubMenuItem('1', 'Tab Bar', const TabDemo(), '/lib/navigations/tab_demo.dart'),
+      buildSubMenuItem('2', 'Dialogs', const DialogDemo(), 'lib/navigations/dialog_demo.dart'),
+      buildSubMenuItem('3', 'Drawer', const DrawerDemo(), 'lib/navigations/drawer_demo.dart')
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orangeAccent,
@@ -115,7 +124,8 @@ class HomeScreen extends StatelessWidget {
               buildMenuItem(Icons.widgets, 'Widgets', widgetItems),
               buildMenuItem(Icons.dashboard, 'Layouts', layoutItems),
               buildMenuItem(Icons.list, 'Lists', listItems),
-              buildMenuItem(Icons.phone_android, 'AppBars', appbarItems)
+              buildMenuItem(Icons.phone_android, 'AppBars', appbarItems),
+              buildMenuItem(Icons.screen_share, 'Navigations', navigationItems)
             ]
           ),
         ),
