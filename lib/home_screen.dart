@@ -18,8 +18,13 @@ import 'package:flutter_widgets/lists/list_tile_demo.dart';
 import 'package:flutter_widgets/lists/listview_demo.dart';
 import 'package:flutter_widgets/lists/reorderable_list_demo.dart';
 import 'package:flutter_widgets/lists/swipe_demo.dart';
+import 'package:flutter_widgets/navigations/bottom_navbar_demo.dart';
+import 'package:flutter_widgets/navigations/bottom_sheet_demo.dart';
+import 'package:flutter_widgets/navigations/bottom_tabbar_demo.dart';
 import 'package:flutter_widgets/navigations/dialog_demo.dart';
+import 'package:flutter_widgets/navigations/drag_scroll_demo.dart';
 import 'package:flutter_widgets/navigations/drawer_demo.dart';
+import 'package:flutter_widgets/navigations/page_selector_demo.dart';
 import 'package:flutter_widgets/navigations/tab_demo.dart';
 import 'package:flutter_widgets/preview.dart';
 import 'package:flutter_widgets/widgets/button_demo.dart';
@@ -108,8 +113,14 @@ class HomeScreen extends StatelessWidget {
     List<Widget> navigationItems = [
       buildSubMenuItem('1', 'Tab Bar', const TabDemo(), '/lib/navigations/tab_demo.dart'),
       buildSubMenuItem('2', 'Dialogs', const DialogDemo(), 'lib/navigations/dialog_demo.dart'),
-      buildSubMenuItem('3', 'Drawer', const DrawerDemo(), 'lib/navigations/drawer_demo.dart')
+      buildSubMenuItem('3', 'Drawer', const DrawerDemo(), 'lib/navigations/drawer_demo.dart'),
+      buildSubMenuItem('4', 'Bottom Sheet', const BottomSheetDemo(), 'lib/navigations/bottom_sheet_demo.dart'),
+      buildSubMenuItem('5', 'Bottom Tab Bar', const BottomTabBarDemo(), 'lib/navigations/bottom_tabbar_demo.dart'),
+      buildSubMenuItem('6', 'Bottom Nav Bar', const BottomNavigationBarDemo(),'lib/navigations/bottom_navbar_demo.dart'),
+      buildSubMenuItem('7', 'Page Selector',const PageSelectorDemo(), 'lib/navigations/page_selector_demo.dart'),
+      buildSubMenuItem('8', 'DraggableScrollableSheet', const DraggableScrollableSheetDemo(),'lib/navigations/drag_scroll_demo.dart')
     ];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orangeAccent,
