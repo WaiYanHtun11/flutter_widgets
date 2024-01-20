@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/animations/hero_demo.dart';
 import 'package:flutter_widgets/appbars/backdrop_demo.dart';
 import 'package:flutter_widgets/appbars/basic_appbar_demo.dart';
 import 'package:flutter_widgets/appbars/bottom_appbar_demo.dart';
@@ -121,6 +122,9 @@ class HomeScreen extends StatelessWidget {
       buildSubMenuItem('8', 'DraggableScrollableSheet', const DraggableScrollableSheetDemo(),'lib/navigations/drag_scroll_demo.dart')
     ];
 
+    List<Widget> animationItems = [
+      buildSubMenuItem('1', 'Hero',const HeroDemo(), 'lib/animations/hero_demo.dart')
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orangeAccent,
@@ -136,7 +140,8 @@ class HomeScreen extends StatelessWidget {
               buildMenuItem(Icons.dashboard, 'Layouts', layoutItems),
               buildMenuItem(Icons.list, 'Lists', listItems),
               buildMenuItem(Icons.phone_android, 'AppBars', appbarItems),
-              buildMenuItem(Icons.screen_share, 'Navigations', navigationItems)
+              buildMenuItem(Icons.screen_share, 'Navigations', navigationItems),
+              buildMenuItem(Icons.animation, 'Animations', animationItems)
             ]
           ),
         ),
