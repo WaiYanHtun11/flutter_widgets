@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/animations/animated_container_demo.dart';
+import 'package:flutter_widgets/animations/animated_icon_demo.dart';
+import 'package:flutter_widgets/animations/animation_package_demo.dart';
 import 'package:flutter_widgets/animations/hero_demo.dart';
+import 'package:flutter_widgets/animations/opacity_demo.dart';
 import 'package:flutter_widgets/appbars/backdrop_demo.dart';
 import 'package:flutter_widgets/appbars/basic_appbar_demo.dart';
 import 'package:flutter_widgets/appbars/bottom_appbar_demo.dart';
@@ -123,7 +127,11 @@ class HomeScreen extends StatelessWidget {
     ];
 
     List<Widget> animationItems = [
-      buildSubMenuItem('1', 'Hero',const HeroDemo(), 'lib/animations/hero_demo.dart')
+      buildSubMenuItem('1', 'Hero',const HeroDemo(), 'lib/animations/hero_demo.dart'),
+      buildSubMenuItem('2', 'Opacity', const OpacityDemo(), 'lib/animations/hero_demo.dart'),
+      buildSubMenuItem('3', 'Animated Icon',const AnimatedIconDemo(),'lib/animations/animated_icon_demo.dart'),
+      buildSubMenuItem('4', 'Animated Container', const AnimatedContainerDemo(), 'lib/animations/animated_container_demo.dart'),
+      buildSubMenuItem('5', 'Animation Package',const AnimationPackageDemo(), 'lib/animations/animation_package_demo.dart')
     ];
     return Scaffold(
       appBar: AppBar(
